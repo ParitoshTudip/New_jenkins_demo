@@ -234,7 +234,7 @@ def update_post(post_id):
       response_data = {"message": "No JSON response from API"}
     return jsonify({"status": "Post Updated", "response": response_data}), 200
   except Exception as e:
-    return jsonify({"error": f"Failed to update posts: {str(e)}"}), 500
+    return jsonify({"error": f"Failed to update the post: {str(e)}"}), 500
 
 
 @app.delete('/delete-post/<int:post_id>')
