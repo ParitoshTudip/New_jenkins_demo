@@ -219,7 +219,7 @@ def create_post():
     res = requests.post(os.getenv('BASE_URL'), json=body, timeout=10)
     return jsonify({"status": "Post Created", "response": res.json()}), 201
   except Exception as e:
-    return jsonify({"error": f"Failed to create post: {str(e)}"}), 500
+    return jsonify({"error": f"Failed to create the post: {str(e)}"}), 500
 
 @app.put('/update-post/<int:post_id>')
 def update_post(post_id):
